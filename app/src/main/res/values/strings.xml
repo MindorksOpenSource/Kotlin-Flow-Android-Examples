@@ -1,3 +1,21 @@
 <resources>
     <string name="app_name">Kotlin-Flow-Example</string>
+    <string name="doSomeWork">doSomeWork</string>
+    <string name="operators">Operators</string>
+    <string name="search">Search</string>
+    <string name="simple">Simple</string>
+    <string name="map">Map</string>
+    <string name="zip">Zip</string>
+    <string name="timer">Timer</string>
+    <string name="filter">Filter</string>
+    <string name="concat">Concat</string>
+    <string name="merge">Merge</string>
+    <string name="delay">delay</string>
+    <string name="result">Result</string>
+    <string name="context">Context</string>
+    <string name="distinct">Distinct</string>
+    <string name="emitter">Emitter</string>
+    <string name="errors">Errors</string>
+    <string name="limit">Limit</string>
+    <string name="transform">Transform</string>
 </resources>
