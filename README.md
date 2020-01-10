@@ -12,6 +12,7 @@
 * Who wants to learn Kotlin Flow
 
 ### Just Build the project and start learning Flow by examples.
+If you want to get started with Kotlin Flow, [checkout the blog](https://blog.mindorks.com/what-is-flow-in-kotlin-and-how-to-use-it-in-android-project)
 
 # Kotlin Flow Operators Examples present in this sample project
 * `Filter` -> Returns a flow containing only values of the original flow that matches the given condition
