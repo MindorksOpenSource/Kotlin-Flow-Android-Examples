@@ -25,7 +25,6 @@
 * `FlattenConcat` -> Flattens the given flow of flows into a single flow
 * `DistinctUntilChanged` -> suppress duplicate items emitted
 * `FlattenMerge` -> Flattens the given flow of flows into a single flow with alimit on the number of concurrently collected flows.
-* `Limit` -> Flattens the given flow of flows into a single flow with alimit on the number of concurrently collected flows.
 * `Map` ->  Returns a flow containing the results of applying the given condition
 * `Merge` ->  Merges the given flows into a single flow without preserving an order of elements.
 * `OnCompletion` -> Invokes it when the given flow is completed or cancelled
@@ -39,7 +38,7 @@
 
 ### License
 ```
-   Copyright (C) 2019 MINDORKS NEXTGEN PRIVATE LIMITED
+   Copyright (C) 2020 MINDORKS NEXTGEN PRIVATE LIMITED
 
    Licensed under the Apache License, Version 2.0 (the "License");
    you may not use this file except in compliance with the License.
