@@ -42,6 +42,8 @@ class OperatorsActivity : AppCompatActivity() {
     fun startTransformLatestFlowActivity(view: View) =
         startActivity(Intent(this, TransformLatestFlowActivity::class.java))
 
-    fun startFlatMapLatestFlowActivity(view: View)  =
+    fun startFlatMapLatestFlowActivity(view: View) =
         startActivity(Intent(this, FlatMapLatestFlowActivity::class.java))
+
+
 }

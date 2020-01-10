@@ -61,6 +61,7 @@
         <activity android:name=".ui.operators.FlattenMergeFlowActivity" />
         <activity android:name=".ui.operators.TransformLatestFlowActivity" />
         <activity android:name=".ui.operators.FlatMapLatestFlowActivity" />
+        <activity android:name=".ui.operators.CombineFlowActivity" />
     </application>
 
 </manifest>

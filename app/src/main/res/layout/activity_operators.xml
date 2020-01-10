@@ -64,13 +64,13 @@
             android:onClick="startLimitActivity"
             android:text="@string/limit"
             android:textColor="@android:color/black" />
-
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:onClick="startFlatMapConcatActivity"
             android:text="Flat Map Concat"
             android:textColor="@android:color/black" />
+
 
         <Button
             android:layout_width="match_parent"
@@ -103,7 +103,8 @@
             android:layout_height="wrap_content"
             android:onClick="startTransformLatestFlowActivity"
             android:text="Transform Latest Flow"
-            android:textColor="@android:color/black" /> <Button
+            android:textColor="@android:color/black" />
+        <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:onClick="startFlatMapLatestFlowActivity"

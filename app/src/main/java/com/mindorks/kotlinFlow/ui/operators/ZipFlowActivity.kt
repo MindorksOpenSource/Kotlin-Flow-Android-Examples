@@ -30,18 +30,17 @@ class ZipFlowActivity : AppCompatActivity() {
 
     private fun doSomeWork() {
         CoroutineScope(Dispatchers.Main).launch {
-            flowOne.zip(flowTwo)
+            val output = flowOne.zip(flowTwo)
             { firstString, secondString ->
                 "$firstString $secondString"
-            }.collect {
-                textView.text = it
-            }
+            }.toList()
+            textView.text = output.toString()
         }
     }
 
     private fun setupFlow() {
-        flowOne = flowOf("Himanshu").flowOn(Dispatchers.Default)
-        flowTwo = flowOf("Singh").flowOn(Dispatchers.Default)
+        flowOne = flowOf("Himanshu", "Amit", "Janishar").flowOn(Dispatchers.Default)
+        flowTwo = flowOf("Singh", "Shekhar","Ali").flowOn(Dispatchers.Default)
 
     }
 }
