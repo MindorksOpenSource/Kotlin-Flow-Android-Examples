@@ -50,7 +50,7 @@
             android:name=".ui.operators.FlatMapConcatFlowActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ui.operators.TransformFlowActivity"
+            android:name=".ui.operators.FilterFlowActivity"
             android:screenOrientation="portrait" />
         <activity
             android:name=".ui.operators.ZipFlowActivity"
@@ -61,7 +61,11 @@
         <activity android:name=".ui.operators.FlattenMergeFlowActivity" />
         <activity android:name=".ui.operators.TransformLatestFlowActivity" />
         <activity android:name=".ui.operators.FlatMapLatestFlowActivity" />
-        <activity android:name=".ui.operators.CombineFlowActivity" />
+        <activity android:name=".ui.operators.FilterNotFlowActivity" />
+        <activity android:name=".ui.operators.FilterIsInstanceFlowActivity" />
+        <activity android:name=".ui.operators.FilterNotNullFlowActivity" />
+        <activity android:name=".ui.operators.MapFlowActivity" />
+        <activity android:name=".ui.operators.ScanReduceFlowActivity" />
     </application>
 
 </manifest>

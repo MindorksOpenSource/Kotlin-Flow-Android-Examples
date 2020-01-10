@@ -64,6 +64,21 @@
             android:onClick="startLimitActivity"
             android:text="@string/limit"
             android:textColor="@android:color/black" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="startMapActivity"
+            android:text="Map "
+            android:textColor="@android:color/black" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="startScanReduceActivity"
+            android:text="Scan Reduce"
+            android:textColor="@android:color/black" />
+
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -92,18 +107,21 @@
             android:onClick="startMergeFlowActivity"
             android:text="Merge Flow"
             android:textColor="@android:color/black" />
+
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:onClick="startFlatterMergeFlowActivity"
             android:text="Flatten Merge Flow"
             android:textColor="@android:color/black" />
+
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:onClick="startTransformLatestFlowActivity"
             android:text="Transform Latest Flow"
             android:textColor="@android:color/black" />
+
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -114,8 +132,29 @@
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:onClick="startTransformActivity"
-            android:text="@string/transform"
+            android:onClick="startFilterActivity"
+            android:text="Filter"
+            android:textColor="@android:color/black" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="startFilterNotActivity"
+            android:text="Filter Not"
+            android:textColor="@android:color/black" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="startFilterIsInstanceFlowActivity"
+            android:text="Filter Is Instance"
+            android:textColor="@android:color/black" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="startFilterNotNullFlowActivity"
+            android:text="Filter Not Null"
             android:textColor="@android:color/black" />
 
         <Button

@@ -45,5 +45,24 @@ class OperatorsActivity : AppCompatActivity() {
     fun startFlatMapLatestFlowActivity(view: View) =
         startActivity(Intent(this, FlatMapLatestFlowActivity::class.java))
 
+    fun startFilterActivity(view: View) =
+        startActivity(Intent(this, FilterFlowActivity::class.java))
+
+    fun startFilterNotActivity(view: View) =
+        startActivity(Intent(this, FilterNotFlowActivity::class.java))
+
+    fun startFilterIsInstanceFlowActivity(view: View) =
+        startActivity(Intent(this, FilterIsInstanceFlowActivity::class.java))
+
+    fun startFilterNotNullFlowActivity(view: View) =
+        startActivity(Intent(this, FilterNotNullFlowActivity::class.java))
+
+    fun startMapActivity(view: View) =
+        startActivity(Intent(this, MapFlowActivity::class.java))
+
+
+    fun startScanReduceActivity(view: View) =
+        startActivity(Intent(this, ScanReduceFlowActivity::class.java))
+
 
 }
