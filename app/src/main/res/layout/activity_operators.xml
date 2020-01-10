@@ -25,65 +25,43 @@
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:onClick="startContextActivity"
-            android:text="@string/context"
+            android:onClick="startOnStartActivity"
+            android:text="@string/on_start"
             android:textColor="@android:color/black" />
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:onClick="startDelayActivity"
-            android:text="@string/delay"
+            android:onClick="startDistinctUntilChangedActivity"
+            android:text="@string/distinct_until_changed"
             android:textColor="@android:color/black" />
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:onClick="startDistinctActivity"
-            android:text="@string/distinct"
-            android:textColor="@android:color/black" />
-
-
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:onClick="startEmitterActivity"
-            android:text="@string/emitter"
-            android:textColor="@android:color/black" />
-
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:onClick="startErrorsActivity"
-            android:text="@string/errors"
-            android:textColor="@android:color/black" />
-
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:onClick="startLimitActivity"
-            android:text="@string/limit"
+            android:onClick="startOnCompletionActivity"
+            android:text="@string/on_completion"
             android:textColor="@android:color/black" />
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:onClick="startMapActivity"
-            android:text="Map "
+            android:text="@string/map"
             android:textColor="@android:color/black" />
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:onClick="startScanReduceActivity"
-            android:text="Scan Reduce"
+            android:text="@string/scan_reduce"
             android:textColor="@android:color/black" />
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:onClick="startFlatMapConcatActivity"
-            android:text="Flat Map Concat"
+            android:text="@string/flat_map_concat"
             android:textColor="@android:color/black" />
 
 
@@ -91,70 +69,70 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:onClick="startFlatMapMergeActivity"
-            android:text="Flat Map Merge"
+            android:text="@string/flat_map_merge"
             android:textColor="@android:color/black" />
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:onClick="startFlattenConcatFlowActivity"
-            android:text="Flatten Concat Flow"
+            android:text="@string/flatten_concat_flow"
             android:textColor="@android:color/black" />
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:onClick="startMergeFlowActivity"
-            android:text="Merge Flow"
+            android:text="@string/merge_flow"
             android:textColor="@android:color/black" />
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:onClick="startFlatterMergeFlowActivity"
-            android:text="Flatten Merge Flow"
+            android:text="@string/flatten_merge_flow"
             android:textColor="@android:color/black" />
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:onClick="startTransformLatestFlowActivity"
-            android:text="Transform Latest Flow"
+            android:text="@string/transform_latest_flow"
             android:textColor="@android:color/black" />
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:onClick="startFlatMapLatestFlowActivity"
-            android:text="Flat Map Latest Flow"
+            android:text="@string/flat_map_latest_flow"
             android:textColor="@android:color/black" />
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:onClick="startFilterActivity"
-            android:text="Filter"
+            android:text="@string/filter"
             android:textColor="@android:color/black" />
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:onClick="startFilterNotActivity"
-            android:text="Filter Not"
+            android:text="@string/filter_not"
             android:textColor="@android:color/black" />
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:onClick="startFilterIsInstanceFlowActivity"
-            android:text="Filter Is Instance"
+            android:text="@string/filter_is_instance"
             android:textColor="@android:color/black" />
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:onClick="startFilterNotNullFlowActivity"
-            android:text="Filter Not Null"
+            android:text="@string/filter_not_null"
             android:textColor="@android:color/black" />
 
         <Button

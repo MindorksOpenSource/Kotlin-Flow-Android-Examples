@@ -9,7 +9,7 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.*
 import kotlinx.coroutines.launch
 
-class OnStartFlowActivity : AppCompatActivity() {
+class OnCompletionFlowActivity : AppCompatActivity() {
     lateinit var flowOne: Flow<String>
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -27,8 +27,8 @@ class OnStartFlowActivity : AppCompatActivity() {
 
     private fun doSomeWork() {
         CoroutineScope(Dispatchers.Main).launch {
-            val output = flowOne.onStart { emit("Start Of Flow") }.toList()
-            textView.text = output.toString() //["Start Of Flow","Himanshu", "Amit", "Janishar"]
+            val output = flowOne.onCompletion { emit("End Of Flow") }.toList()
+            textView.text = output.toString() //["Himanshu", "Amit", "Janishar","End Of Flow"]
         }
     }
 

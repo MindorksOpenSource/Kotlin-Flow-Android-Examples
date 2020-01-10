@@ -13,17 +13,17 @@ class OperatorsActivity : AppCompatActivity() {
         setContentView(R.layout.activity_operators)
     }
 
-    fun startSimpleActivity(view: View?) {}
-    fun startContextActivity(view: View?) {}
+    fun startSimpleActivity(view: View?)  = startActivity(Intent(this, SimpleFlowActivity::class.java))
     fun startZipActivity(view: View?) = startActivity(Intent(this, ZipFlowActivity::class.java))
 
 
-    fun startDelayActivity(view: View?) {}
-    fun startDistinctActivity(view: View?) {}
-    fun startEmitterActivity(view: View?) {}
-    fun startErrorsActivity(view: View?) {}
-    fun startLimitActivity(view: View?) {}
-    fun startTransformActivity(view: View?) {}
+    fun startDistinctUntilChangedActivity(view: View?) =
+        startActivity(Intent(this, DistinctUntilChangedFlowActivity::class.java))
+
+
+    fun startOnCompletionActivity(view: View?) =
+        startActivity(Intent(this, OnCompletionFlowActivity::class.java))
+
     fun startFlatMapConcatActivity(view: View) =
         startActivity(Intent(this, FlatMapConcatFlowActivity::class.java))
 
@@ -63,6 +63,9 @@ class OperatorsActivity : AppCompatActivity() {
 
     fun startScanReduceActivity(view: View) =
         startActivity(Intent(this, ScanReduceFlowActivity::class.java))
+
+    fun startOnStartActivity(view: View) =
+        startActivity(Intent(this, OnStartFlowActivity::class.java))
 
 
 }

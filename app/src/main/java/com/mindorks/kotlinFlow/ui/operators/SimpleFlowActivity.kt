@@ -3,10 +3,38 @@ package com.mindorks.kotlinFlow.ui.operators
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.mindorks.kotlinFlow.R
+import kotlinx.android.synthetic.main.activity_example.*
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.flow.flowOf
+import kotlinx.coroutines.flow.single
+import kotlinx.coroutines.flow.toList
+import kotlinx.coroutines.launch
 
 class SimpleFlowActivity : AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_example)
+        setupFlow()
+        setupClick()
+    }
+
+    private fun setupClick() {
+        btn.setOnClickListener {
+            doSomeWork()
+        }
+    }
+
+    private fun doSomeWork() {
+        CoroutineScope(Dispatchers.Main).launch {
+            val output = flowOf(1, 2, 3).toList()
+            textView.text = output.toString()
+        }
+    }
+
+    private fun setupFlow() {
+
+
     }
 }

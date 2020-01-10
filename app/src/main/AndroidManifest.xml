@@ -32,10 +32,10 @@
             android:name=".ui.operators.FlattenConcatFlowActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ui.operators.DelayFlowActivity"
+            android:name=".ui.operators.OnStartFlowActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ui.operators.DistinctFlowActivity"
+            android:name=".ui.operators.DistinctUntilChangedFlowActivity"
             android:screenOrientation="portrait" />
         <activity
             android:name=".ui.operators.EmitterFlowActivity"
@@ -66,6 +66,7 @@
         <activity android:name=".ui.operators.FilterNotNullFlowActivity" />
         <activity android:name=".ui.operators.MapFlowActivity" />
         <activity android:name=".ui.operators.ScanReduceFlowActivity" />
+        <activity android:name=".ui.operators.OnCompletionFlowActivity" />
     </application>
 
 </manifest>

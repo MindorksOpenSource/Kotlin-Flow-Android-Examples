@@ -13,8 +13,6 @@ import kotlinx.coroutines.launch
 
 class TransformLatestFlowActivity : AppCompatActivity() {
 
-
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_example)
@@ -28,6 +26,8 @@ class TransformLatestFlowActivity : AppCompatActivity() {
     }
 
     private fun doSomeWork() {
+
+
         CoroutineScope(Dispatchers.Main).launch {
             val output =
                 flow {

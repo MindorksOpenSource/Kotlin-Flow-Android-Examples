@@ -4,10 +4,8 @@
     <string name="operators">Operators</string>
     <string name="search">Search</string>
     <string name="simple">Simple</string>
-    <string name="map">Map</string>
     <string name="zip">Zip</string>
     <string name="timer">Timer</string>
-    <string name="filter">Filter</string>
     <string name="concat">Concat</string>
     <string name="merge">Merge</string>
     <string name="delay">delay</string>
@@ -18,4 +16,20 @@
     <string name="errors">Errors</string>
     <string name="limit">Limit</string>
     <string name="transform">Transform</string>
+    <string name="filter_not_null">Filter Not Null</string>
+    <string name="filter_is_instance">Filter Is Instance</string>
+    <string name="filter_not">Filter Not</string>
+    <string name="filter">Filter</string>
+    <string name="flat_map_latest_flow">Flat Map Latest Flow</string>
+    <string name="transform_latest_flow">Transform Latest Flow</string>
+    <string name="flatten_merge_flow">Flatten Merge Flow</string>
+    <string name="merge_flow">Merge Flow</string>
+    <string name="flatten_concat_flow">Flatten Concat Flow</string>
+    <string name="flat_map_merge">Flat Map Merge</string>
+    <string name="flat_map_concat">Flat Map Concat</string>
+    <string name="scan_reduce">Scan Reduce</string>
+    <string name="map">Map</string>
+    <string name="distinct_until_changed">Distinct Until Changed</string>
+    <string name="on_completion">On Completion</string>
+    <string name="on_start">on Start</string>
 </resources>
