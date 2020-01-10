@@ -1,4 +1,4 @@
-package com.mindorks.kotlinFlow.ui.operators
+package com.mindorks.kotlinFlow.operators
 
 import android.os.Bundle
 import android.util.Log

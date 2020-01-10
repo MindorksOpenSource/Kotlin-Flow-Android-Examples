@@ -1,11 +1,10 @@
-package com.mindorks.kotlinFlow.ui
+package com.mindorks.kotlinFlow
 
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
-import com.mindorks.kotlinFlow.R
-import com.mindorks.kotlinFlow.ui.operators.*
+import com.mindorks.kotlinFlow.operators.*
 
 class OperatorsActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -13,7 +12,9 @@ class OperatorsActivity : AppCompatActivity() {
         setContentView(R.layout.activity_operators)
     }
 
-    fun startSimpleActivity(view: View?)  = startActivity(Intent(this, SimpleFlowActivity::class.java))
+    fun startSimpleActivity(view: View?) =
+        startActivity(Intent(this, SimpleFlowActivity::class.java))
+
     fun startZipActivity(view: View?) = startActivity(Intent(this, ZipFlowActivity::class.java))
 
 

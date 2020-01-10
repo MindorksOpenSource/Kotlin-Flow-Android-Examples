@@ -10,63 +10,71 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".ui.operators.SimpleFlowActivity"
+            android:name=".operators.SimpleFlowActivity"
             android:screenOrientation="portrait" />
-        <activity android:name=".ui.OperatorsActivity">
+        <activity android:name=".OperatorsActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity">
 
-        </activity>
         <activity
-            android:name=".ui.operators.ContextFlowActivity"
+            android:name=".operators.FlatMapMergeFlowActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ui.operators.FlatMapMergeFlowActivity"
+            android:name=".operators.FlattenConcatFlowActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ui.operators.FlattenConcatFlowActivity"
+            android:name=".operators.OnStartFlowActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ui.operators.OnStartFlowActivity"
+            android:name=".operators.DistinctUntilChangedFlowActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".operators.LImitFlowActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ui.operators.DistinctUntilChangedFlowActivity"
+            android:name=".operators.FlatMapConcatFlowActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ui.operators.EmitterFlowActivity"
+            android:name=".operators.FilterFlowActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ui.operators.ErrorFlowActivity"
+            android:name=".operators.ZipFlowActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ui.operators.LImitFlowActivity"
+            android:name=".operators.MergeFlowActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ui.operators.FlatMapConcatFlowActivity"
+            android:name=".operators.FlattenMergeFlowActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ui.operators.FilterFlowActivity"
+            android:name=".operators.TransformLatestFlowActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ui.operators.ZipFlowActivity"
+            android:name=".operators.FlatMapLatestFlowActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ui.operators.MergeFlowActivity"
+            android:name=".operators.FilterNotFlowActivity"
             android:screenOrientation="portrait" />
-        <activity android:name=".ui.operators.FlattenMergeFlowActivity" />
-        <activity android:name=".ui.operators.TransformLatestFlowActivity" />
-        <activity android:name=".ui.operators.FlatMapLatestFlowActivity" />
-        <activity android:name=".ui.operators.FilterNotFlowActivity" />
-        <activity android:name=".ui.operators.FilterIsInstanceFlowActivity" />
-        <activity android:name=".ui.operators.FilterNotNullFlowActivity" />
-        <activity android:name=".ui.operators.MapFlowActivity" />
-        <activity android:name=".ui.operators.ScanReduceFlowActivity" />
-        <activity android:name=".ui.operators.OnCompletionFlowActivity" />
+        <activity
+            android:name=".operators.FilterIsInstanceFlowActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".operators.FilterNotNullFlowActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".operators.MapFlowActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".operators.ScanReduceFlowActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".operators.OnCompletionFlowActivity"
+            android:screenOrientation="portrait" />
     </application>
 
 </manifest>
