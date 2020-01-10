@@ -68,8 +68,46 @@
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:onClick="startMergeActivity"
-            android:text="@string/merge"
+            android:onClick="startFlatMapConcatActivity"
+            android:text="Flat Map Concat"
+            android:textColor="@android:color/black" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="startFlatMapMergeActivity"
+            android:text="Flat Map Merge"
+            android:textColor="@android:color/black" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="startFlattenConcatFlowActivity"
+            android:text="Flatten Concat Flow"
+            android:textColor="@android:color/black" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="startMergeFlowActivity"
+            android:text="Merge Flow"
+            android:textColor="@android:color/black" />
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="startFlatterMergeFlowActivity"
+            android:text="Flatten Merge Flow"
+            android:textColor="@android:color/black" />
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="startTransformLatestFlowActivity"
+            android:text="Transform Latest Flow"
+            android:textColor="@android:color/black" /> <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="startFlatMapLatestFlowActivity"
+            android:text="Flat Map Latest Flow"
             android:textColor="@android:color/black" />
 
         <Button

@@ -11,7 +11,7 @@ import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.*
 import kotlinx.coroutines.launch
 
-class MergeFlowActivity : AppCompatActivity() {
+class FlattenConcatFlowActivity : AppCompatActivity() {
 
     lateinit var flowOne: Flow<String>
     lateinit var flowTwo: Flow<String>
@@ -32,7 +32,8 @@ class MergeFlowActivity : AppCompatActivity() {
 
     private fun doSomeWork() {
         CoroutineScope(Dispatchers.Main).launch {
-            val output = merge(flowOne, flowTwo)
+            val output = flowOf(flowOne, flowTwo)
+                .flattenConcat()
                 .toList()
             textView.text = output.toString()
 

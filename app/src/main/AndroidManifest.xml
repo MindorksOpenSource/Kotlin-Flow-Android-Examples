@@ -12,16 +12,24 @@
         <activity
             android:name=".ui.operators.SimpleFlowActivity"
             android:screenOrientation="portrait" />
-        <activity android:name=".ui.OperatorsActivity" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".ui.OperatorsActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".MainActivity">
+
+        </activity>
         <activity
             android:name=".ui.operators.ContextFlowActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.operators.FlatMapMergeFlowActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.operators.FlattenConcatFlowActivity"
             android:screenOrientation="portrait" />
         <activity
             android:name=".ui.operators.DelayFlowActivity"
@@ -39,7 +47,7 @@
             android:name=".ui.operators.LImitFlowActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ui.operators.MergeFlowActivity"
+            android:name=".ui.operators.FlatMapConcatFlowActivity"
             android:screenOrientation="portrait" />
         <activity
             android:name=".ui.operators.TransformFlowActivity"
@@ -47,6 +55,12 @@
         <activity
             android:name=".ui.operators.ZipFlowActivity"
             android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.operators.MergeFlowActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".ui.operators.FlattenMergeFlowActivity" />
+        <activity android:name=".ui.operators.TransformLatestFlowActivity" />
+        <activity android:name=".ui.operators.FlatMapLatestFlowActivity" />
     </application>
 
 </manifest>
