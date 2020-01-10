@@ -3,9 +3,9 @@ package com.mindorks.kotlinFlow.operators
 import android.os.Bundle
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.lifecycleScope
 import com.mindorks.kotlinFlow.R
 import kotlinx.android.synthetic.main.activity_example.*
-import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.*
 import kotlinx.coroutines.launch
@@ -29,7 +29,7 @@ class ZipFlowActivity : AppCompatActivity() {
     }
 
     private fun doSomeWork() {
-        CoroutineScope(Dispatchers.Main).launch {
+        lifecycleScope.launchWhenCreated {
             val output = flowOne.zip(flowTwo)
             { firstString, secondString ->
                 "$firstString $secondString"
