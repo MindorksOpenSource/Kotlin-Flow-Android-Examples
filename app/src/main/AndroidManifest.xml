@@ -33,9 +33,7 @@
             android:name=".operators.DistinctUntilChangedFlowActivity"
             android:screenOrientation="portrait" />
 
-        <activity
-            android:name=".operators.LImitFlowActivity"
-            android:screenOrientation="portrait" />
+
         <activity
             android:name=".operators.FlatMapConcatFlowActivity"
             android:screenOrientation="portrait" />
