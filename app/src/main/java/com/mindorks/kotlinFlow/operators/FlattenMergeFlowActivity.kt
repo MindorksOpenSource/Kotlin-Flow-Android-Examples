@@ -5,7 +5,7 @@ import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import com.mindorks.kotlinFlow.R
 import kotlinx.android.synthetic.main.activity_example.*
-import kotlinx.coroutines.CoroutineScope
+import androidx.lifecycle.lifecycleScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.*
@@ -31,7 +31,7 @@ class FlattenMergeFlowActivity : AppCompatActivity() {
     }
 
     private fun doSomeWork() {
-        CoroutineScope(Dispatchers.Main).launch {
+        lifecycleScope.launchWhenCreated {
             val output = flowOf(flowOne, flowTwo)
                 .flattenMerge()
                 .toList()

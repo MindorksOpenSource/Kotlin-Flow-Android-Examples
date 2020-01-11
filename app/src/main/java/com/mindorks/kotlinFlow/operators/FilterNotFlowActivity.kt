@@ -4,7 +4,7 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.mindorks.kotlinFlow.R
 import kotlinx.android.synthetic.main.activity_example.*
-import kotlinx.coroutines.CoroutineScope
+import androidx.lifecycle.lifecycleScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.*
 import kotlinx.coroutines.launch
@@ -29,7 +29,7 @@ class FilterNotFlowActivity : AppCompatActivity() {
     }
 
     private fun doSomeWork() {
-        CoroutineScope(Dispatchers.Main).launch {
+        lifecycleScope.launchWhenCreated {
             val output = flowOne.filterNot {
                 (it.length == 4)
             }.toList()
