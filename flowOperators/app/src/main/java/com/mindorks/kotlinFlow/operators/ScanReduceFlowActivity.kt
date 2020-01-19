@@ -4,7 +4,7 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.mindorks.kotlinFlow.R
 import kotlinx.android.synthetic.main.activity_example.*
-import  androidx.lifecycle.lifecycleScope
+import androidx.lifecycle.lifecycleScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.*
 
@@ -28,7 +28,7 @@ class ScanReduceFlowActivity : AppCompatActivity() {
     }
 
     private fun doSomeWork() {
-                lifecycleScope.launchWhenCreated  {
+        lifecycleScope.launchWhenCreated {
             val output =
                 flowOne.scanReduce { accumulator, value -> "$accumulator $value" }.toList()
             textView.text = output.toString()

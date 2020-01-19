@@ -2,9 +2,9 @@ package com.mindorks.kotlinFlow.operators
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.lifecycleScope
 import com.mindorks.kotlinFlow.R
 import kotlinx.android.synthetic.main.activity_example.*
-import  androidx.lifecycle.lifecycleScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.*
 
@@ -29,7 +29,8 @@ class FilterFlowActivity : AppCompatActivity() {
     }
 
     private fun doSomeWork() {
-                lifecycleScope.launchWhenCreated  {
+
+        lifecycleScope.launchWhenCreated {
             val output = flowOne.filter {
                 (it.length > 4)
             }.toList()
