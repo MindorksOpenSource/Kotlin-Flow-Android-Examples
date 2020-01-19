@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.mindorks.kotlinFlow">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".operators.SimpleFlowActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".OperatorsActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".operators.FlatMapMergeFlowActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".operators.FlattenConcatFlowActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".operators.OnStartFlowActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".operators.DistinctUntilChangedFlowActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".operators.FlatMapConcatFlowActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".operators.FilterFlowActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".operators.ZipFlowActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".operators.MergeFlowActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".operators.FlattenMergeFlowActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".operators.TransformLatestFlowActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".operators.FlatMapLatestFlowActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".operators.FilterNotFlowActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".operators.FilterIsInstanceFlowActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".operators.FilterNotNullFlowActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".operators.MapFlowActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".operators.ScanReduceFlowActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".operators.OnCompletionFlowActivity"
+            android:screenOrientation="portrait" />
+    </application>
+
+</manifest>
