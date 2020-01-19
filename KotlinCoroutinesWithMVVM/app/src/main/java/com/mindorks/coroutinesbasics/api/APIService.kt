@@ -10,4 +10,5 @@ interface APIService {
 
     @GET("api/users")
     fun fetchDataFromAPI(): Deferred<Response<APIResponse>>
+
 }
