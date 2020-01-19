@@ -1,24 +1,20 @@
 package com.mindorks.coroutinesbasics.viewmodel
 
-import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.google.gson.Gson
+import androidx.lifecycle.viewModelScope
 import com.mindorks.coroutinesbasics.model.APIResponse
 import com.mindorks.coroutinesbasics.repository.MainRepository
 import com.mindorks.coroutinesbasics.util.Result
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
 class MainViewModel : ViewModel() {
     private val mainRepository = MainRepository()
-    private val scope = CoroutineScope(Dispatchers.Default)
     private val responseLiveData = MutableLiveData<Result<APIResponse>>()
 
     fun getAPIResponse() {
-        scope.launch {
+        viewModelScope.launch {
             responseLiveData.postValue(Result.loading(null))
             val output = mainRepository.getAPIData()
             if (output.isSuccessful) {
