@@ -35,6 +35,8 @@ If you want to get started with Kotlin Flow, [checkout the blog](https://blog.mi
 
 ## If this project helps you in anyway, show your love :heart: by putting a :star: on this project :v:
 
+### Learn to build a ride-sharing Android app like Uber, Lyft - [Check here](https://github.com/MindorksOpenSource/ridesharing-uber-lyft-app)
+
 [Check out MindOrks awesome open source projects here](https://mindorks.com/open-source-projects)
 
 ### License
