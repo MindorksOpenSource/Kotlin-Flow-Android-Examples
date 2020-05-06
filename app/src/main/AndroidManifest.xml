@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.mindorks.kotlinFlow">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,10 +11,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity
-            android:name=".operators.SimpleFlowActivity"
-            android:screenOrientation="portrait" />
-        <activity android:name=".OperatorsActivity">
+
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -20,56 +20,38 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".operators.FlatMapMergeFlowActivity"
-            android:screenOrientation="portrait" />
+            android:name=".learn.retrofit.single.SingleNetworkCallActivity"
+            android:label="@string/single_network_call" />
         <activity
-            android:name=".operators.FlattenConcatFlowActivity"
-            android:screenOrientation="portrait" />
+            android:name=".learn.retrofit.series.SeriesNetworkCallsActivity"
+            android:label="@string/series_network_calls" />
         <activity
-            android:name=".operators.OnStartFlowActivity"
-            android:screenOrientation="portrait" />
+            android:name=".learn.retrofit.parallel.ParallelNetworkCallsActivity"
+            android:label="@string/parallel_network_calls" />
         <activity
-            android:name=".operators.DistinctUntilChangedFlowActivity"
-            android:screenOrientation="portrait" />
+            android:name=".learn.room.RoomDBActivity"
+            android:label="@string/room_database" />
         <activity
-            android:name=".operators.FlatMapConcatFlowActivity"
-            android:screenOrientation="portrait" />
+            android:name=".learn.errorhandling.catch.CatchActivity"
+            android:label="@string/catch_error" />
         <activity
-            android:name=".operators.FilterFlowActivity"
-            android:screenOrientation="portrait" />
+            android:name=".learn.task.onetask.LongRunningTaskActivity"
+            android:label="@string/long_running_task" />
         <activity
-            android:name=".operators.ZipFlowActivity"
-            android:screenOrientation="portrait" />
+            android:name=".learn.task.twotasks.TwoLongRunningTasksActivity"
+            android:label="@string/two_long_running_tasks" />
         <activity
-            android:name=".operators.MergeFlowActivity"
-            android:screenOrientation="portrait" />
+            android:name=".learn.map.MapActivity"
+            android:label="@string/map" />
         <activity
-            android:name=".operators.FlattenMergeFlowActivity"
-            android:screenOrientation="portrait" />
+            android:name=".learn.filter.FilterActivity"
+            android:label="@string/filter" />
         <activity
-            android:name=".operators.TransformLatestFlowActivity"
-            android:screenOrientation="portrait" />
+            android:name=".learn.completion.CompletionActivity"
+            android:label="@string/completion" />
         <activity
-            android:name=".operators.FlatMapLatestFlowActivity"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".operators.FilterNotFlowActivity"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".operators.FilterIsInstanceFlowActivity"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".operators.FilterNotNullFlowActivity"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".operators.MapFlowActivity"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".operators.ScanReduceFlowActivity"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".operators.OnCompletionFlowActivity"
-            android:screenOrientation="portrait" />
+            android:name=".learn.reduce.ReduceActivity"
+            android:label="@string/reduce" />
     </application>
 
 </manifest>
