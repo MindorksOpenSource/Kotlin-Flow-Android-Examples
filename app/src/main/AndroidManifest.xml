@@ -35,6 +35,9 @@
             android:name=".learn.errorhandling.catch.CatchActivity"
             android:label="@string/catch_error" />
         <activity
+            android:name=".learn.errorhandling.emitall.EmitAllActivity"
+            android:label="@string/emit_all_error" />
+        <activity
             android:name=".learn.task.onetask.LongRunningTaskActivity"
             android:label="@string/long_running_task" />
         <activity

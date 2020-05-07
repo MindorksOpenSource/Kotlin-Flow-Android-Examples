@@ -6,6 +6,7 @@
     <string name="room_database">Room Database</string>
     <string name="timeout">Timeout</string>
     <string name="catch_error">Catch Error</string>
+    <string name="emit_all_error">EmitAll Error</string>
     <string name="completion">Completion</string>
     <string name="long_running_task">Long Running Task</string>
     <string name="two_long_running_tasks">Two Long Running Tasks</string>

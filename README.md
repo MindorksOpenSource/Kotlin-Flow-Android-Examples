@@ -60,6 +60,10 @@
 * **Catch Error Handling:** Learn how to handle error in Kotlin Flow using Catch.
     * [Activity Code](app/src/main/java/com/mindorks/kotlinFlow/learn/errorhandling/catch/CatchActivity.kt)
     * [ViewModel Code](app/src/main/java/com/mindorks/kotlinFlow/learn/errorhandling/catch/CatchViewModel.kt) 
+    
+* **EmitAll Error Handling:** Learn how to handle error in Kotlin Flow using emitAll.
+    * [Activity Code](app/src/main/java/com/mindorks/kotlinFlow/learn/errorhandling/emitall/EmitAllActivity.kt)
+    * [ViewModel Code](app/src/main/java/com/mindorks/kotlinFlow/learn/errorhandling/emitall/EmitAllViewModel.kt)     
        
 * **Completion:**
     * [Activity Code](app/src/main/java/com/mindorks/kotlinFlow/learn/completion/CompletionActivity.kt)

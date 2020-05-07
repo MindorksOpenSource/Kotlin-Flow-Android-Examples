@@ -6,6 +6,7 @@ import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import com.mindorks.kotlinFlow.learn.completion.CompletionActivity
 import com.mindorks.kotlinFlow.learn.errorhandling.catch.CatchActivity
+import com.mindorks.kotlinFlow.learn.errorhandling.emitall.EmitAllActivity
 import com.mindorks.kotlinFlow.learn.filter.FilterActivity
 import com.mindorks.kotlinFlow.learn.map.MapActivity
 import com.mindorks.kotlinFlow.learn.reduce.ReduceActivity
@@ -43,10 +44,13 @@ class MainActivity : AppCompatActivity() {
         startActivity(Intent(this@MainActivity, CatchActivity::class.java))
     }
 
+    fun startEmitAllActivity(view: View) {
+        startActivity(Intent(this@MainActivity, EmitAllActivity::class.java))
+    }
+
     fun startCompletionActivity(view: View) {
         startActivity(Intent(this@MainActivity, CompletionActivity::class.java))
     }
-
 
     fun startLongRunningTaskActivity(view: View) {
         startActivity(Intent(this@MainActivity, LongRunningTaskActivity::class.java))

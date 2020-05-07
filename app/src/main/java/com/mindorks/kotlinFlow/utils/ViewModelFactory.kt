@@ -6,6 +6,7 @@ import com.mindorks.kotlinFlow.data.api.ApiHelper
 import com.mindorks.kotlinFlow.data.local.DatabaseHelper
 import com.mindorks.kotlinFlow.learn.completion.CompletionViewModel
 import com.mindorks.kotlinFlow.learn.errorhandling.catch.CatchViewModel
+import com.mindorks.kotlinFlow.learn.errorhandling.emitall.EmitAllViewModel
 import com.mindorks.kotlinFlow.learn.filter.FilterViewModel
 import com.mindorks.kotlinFlow.learn.map.MapViewModel
 import com.mindorks.kotlinFlow.learn.reduce.ReduceViewModel
@@ -34,6 +35,9 @@ class ViewModelFactory(private val apiHelper: ApiHelper, private val dbHelper: D
         }
         if (modelClass.isAssignableFrom(CatchViewModel::class.java)) {
             return CatchViewModel(apiHelper, dbHelper) as T
+        }
+        if (modelClass.isAssignableFrom(EmitAllViewModel::class.java)) {
+            return EmitAllViewModel(apiHelper, dbHelper) as T
         }
         if (modelClass.isAssignableFrom(LongRunningTaskViewModel::class.java)) {
             return LongRunningTaskViewModel(apiHelper, dbHelper) as T
