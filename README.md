@@ -16,6 +16,7 @@
 ## Steps to learn Kotlin Flow by examples from this project
 * First, learn the concepts of Kotlin Flow from this **[blog](https://blog.mindorks.com/what-is-flow-in-kotlin-and-how-to-use-it-in-android-project)**
 * Understanding Terminal Operators in Kotlin Flow. [Learn from here](https://blog.mindorks.com/terminal-operators-in-kotlin-flow)
+* Creating Flow Using Flow Builder in Kotlin. [Learn from here](https://blog.mindorks.com/creating-flow-using-flow-builder-in-kotlin)
 * Exception Handling in Kotlin Flow. [Learn from here](https://blog.mindorks.com/exception-handling-in-kotlin-flow)
 * Then, just clone, build, run the project and start learning Kotlin Flow by examples.
 
