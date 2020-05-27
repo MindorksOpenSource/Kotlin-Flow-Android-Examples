@@ -14,6 +14,7 @@ import com.mindorks.kotlinFlow.learn.retrofit.parallel.ParallelNetworkCallsActiv
 import com.mindorks.kotlinFlow.learn.retrofit.series.SeriesNetworkCallsActivity
 import com.mindorks.kotlinFlow.learn.retrofit.single.SingleNetworkCallActivity
 import com.mindorks.kotlinFlow.learn.room.RoomDBActivity
+import com.mindorks.kotlinFlow.learn.search.SearchActivity
 import com.mindorks.kotlinFlow.learn.task.onetask.LongRunningTaskActivity
 import com.mindorks.kotlinFlow.learn.task.twotasks.TwoLongRunningTasksActivity
 
@@ -71,4 +72,9 @@ class MainActivity : AppCompatActivity() {
     fun startReduceActivity(view: View) {
         startActivity(Intent(this@MainActivity, ReduceActivity::class.java))
     }
+
+    fun startSearchActivity(view: View) {
+        startActivity(Intent(this@MainActivity, SearchActivity::class.java))
+    }
+
 }

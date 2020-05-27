@@ -13,4 +13,6 @@
     <string name="filter">Filter</string>
     <string name="map">Map</string>
     <string name="reduce">Reduce</string>
+    <string name="search">Search</string>
+    <string name="result">Result</string>
 </resources>

@@ -55,6 +55,9 @@
         <activity
             android:name=".learn.reduce.ReduceActivity"
             android:label="@string/reduce" />
+        <activity
+            android:name=".learn.search.SearchActivity"
+            android:label="@string/search" />
     </application>
 
 </manifest>
