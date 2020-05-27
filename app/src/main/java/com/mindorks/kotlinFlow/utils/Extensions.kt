@@ -2,8 +2,9 @@ package com.mindorks.kotlinFlow.utils
 
 import android.widget.SearchView
 import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.StateFlow
 
-fun SearchView.getQueryTextChangeStateFlow(): MutableStateFlow<String> {
+fun SearchView.getQueryTextChangeStateFlow(): StateFlow<String> {
 
     val query = MutableStateFlow("")
 

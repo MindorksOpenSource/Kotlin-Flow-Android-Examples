@@ -1,7 +1,6 @@
 package com.mindorks.kotlinFlow.learn.search
 
 import android.os.Bundle
-import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import com.mindorks.kotlinFlow.R
 import com.mindorks.kotlinFlow.utils.getQueryTextChangeStateFlow
@@ -50,7 +49,6 @@ class SearchActivity : AppCompatActivity(), CoroutineScope {
                 }
                 .flowOn(Dispatchers.Default)
                 .collect { result ->
-                    Log.d("SearchActivity", "result: $result")
                     textViewResult.text = result
                 }
         }

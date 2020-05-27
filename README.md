@@ -82,7 +82,10 @@
       
 * **Filter:**
     * [Activity Code](app/src/main/java/com/mindorks/kotlinFlow/learn/filter/FilterActivity.kt)
-    * [ViewModel Code](app/src/main/java/com/mindorks/kotlinFlow/learn/filter/FilterViewModel.kt)    
+    * [ViewModel Code](app/src/main/java/com/mindorks/kotlinFlow/learn/filter/FilterViewModel.kt)
+    
+* **Search Feature:** Implement Search Using Kotlin Flow Operators - Debounce, Filter, DistinctUntilChanged, FlatMapLatest.
+    * [Activity Code](app/src/main/java/com/mindorks/kotlinFlow/learn/search/SearchActivity.kt)
 
 ## If this project helps you in anyway, show your love :heart: by putting a :star: on this project :v:
 
