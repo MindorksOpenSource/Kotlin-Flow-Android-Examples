@@ -29,17 +29,14 @@ class RoomDBViewModel(private val apiHelper: ApiHelper, private val dbHelper: Da
                     if (usersFromDb.isEmpty()) {
                         return@flatMapConcat apiHelper.getUsers()
                             .map { apiUserList ->
-                                val userList = mutableListOf<User>()
-                                for (apiUser in apiUserList) {
-                                    val user = User(
+                                apiUserList.map { apiUser ->
+                                    User(
                                         apiUser.id,
                                         apiUser.name,
                                         apiUser.email,
                                         apiUser.avatar
                                     )
-                                    userList.add(user)
                                 }
-                                userList
                             }
                             .flatMapConcat { usersToInsertInDB ->
                                 dbHelper.insertAll(usersToInsertInDB)
