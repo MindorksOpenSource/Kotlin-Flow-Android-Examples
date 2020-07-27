@@ -20,6 +20,7 @@
 * Exception Handling in Kotlin Flow. [Learn from here](https://blog.mindorks.com/exception-handling-in-kotlin-flow)
 * StateFlow APIs in Kotlin. [Learn from here](https://blog.mindorks.com/stateflow-apis-in-kotlin)
 * Implement Instant Search Using Kotlin Flow Operators. [Learn from here](https://blog.mindorks.com/instant-search-using-kotlin-flow-operators)
+* Kotlin Flow Retry Operator with Exponential Backoff Delay. [Learn from here](https://blog.mindorks.com/kotlin-flow-retry-operator-with-exponential-backoff-delay)
 * Zip Operator for Parallel Multiple Network Calls. [Learn from here](https://blog.mindorks.com/kotlin-flow-zip-operator-parallel-multiple-network-calls)
 * Then, just clone, build, run the project and start learning Kotlin Flow by examples.
 
