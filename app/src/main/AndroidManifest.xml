@@ -66,6 +66,10 @@
         <activity
             android:name=".learn.retrywhen.RetryWhenActivity"
             android:label="@string/retry_when" />
+
+        <activity
+            android:name=".learn.retryexponentialbackoff.RetryExponentialBackoffActivity"
+            android:label="@string/retry_when" />
     </application>
 
 </manifest>

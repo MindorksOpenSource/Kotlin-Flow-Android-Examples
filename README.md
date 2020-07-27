@@ -32,6 +32,7 @@
 * Exception in Kotlin Flow
 * How to use onCompletion in Flow?
 * Retry Task using retry operator in Flow
+* Retry Task with Exponential Backoff in Flow
 * Using Kotlin Flow with Retrofit.
 * Using Kotlin Flow with Room Database.
 * Making two network calls in parallel using Kotlin Flow.
@@ -97,6 +98,10 @@
 * **RetryWhen:**
     * [Activity Code](app/src/main/java/com/mindorks/kotlinFlow/learn/retrywhen/RetryWhenActivity.kt)
     * [ViewModel Code](app/src/main/java/com/mindorks/kotlinFlow/learn/retrywhen/RetryWhenViewModel.kt)
+
+* **Retry with Exponential Backoff:**
+    * [Activity Code](app/src/main/java/com/mindorks/kotlinFlow/learn/retryexponentialbackoff/RetryExponentialBackoffActivity.kt)
+    * [ViewModel Code](app/src/main/java/com/mindorks/kotlinFlow/learn/retryexponentialbackoff/RetryExponentialBackoffModel.kt)
 
 ## If this project helps you in anyway, show your love :heart: by putting a :star: on this project :v:
 

@@ -14,6 +14,7 @@ import com.mindorks.kotlinFlow.learn.retrofit.parallel.ParallelNetworkCallsViewM
 import com.mindorks.kotlinFlow.learn.retrofit.series.SeriesNetworkCallsViewModel
 import com.mindorks.kotlinFlow.learn.retrofit.single.SingleNetworkCallViewModel
 import com.mindorks.kotlinFlow.learn.retry.RetryViewModel
+import com.mindorks.kotlinFlow.learn.retryexponentialbackoff.RetryExponentialBackoffModel
 import com.mindorks.kotlinFlow.learn.retrywhen.RetryWhenViewModel
 import com.mindorks.kotlinFlow.learn.room.RoomDBViewModel
 import com.mindorks.kotlinFlow.learn.task.onetask.LongRunningTaskViewModel
@@ -64,6 +65,9 @@ class ViewModelFactory(private val apiHelper: ApiHelper, private val dbHelper: D
         }
         if (modelClass.isAssignableFrom(RetryWhenViewModel::class.java)) {
             return RetryWhenViewModel(apiHelper, dbHelper) as T
+        }
+        if (modelClass.isAssignableFrom(RetryExponentialBackoffModel::class.java)) {
+            return RetryExponentialBackoffModel(apiHelper, dbHelper) as T
         }
         throw IllegalArgumentException("Unknown class name")
     }

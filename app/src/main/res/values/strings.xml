@@ -16,5 +16,6 @@
     <string name="search">Search</string>
     <string name="retry">Retry</string>
     <string name="retry_when">RetryWhen</string>
+    <string name="retry_exponential_backoff">RetryExponentialBackoff</string>
     <string name="result">Result</string>
 </resources>

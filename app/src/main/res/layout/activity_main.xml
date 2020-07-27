@@ -118,5 +118,12 @@
             android:text="@string/retry_when"
             android:textColor="@android:color/black" />
 
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="startRetryExponentialBackoffActivity"
+            android:text="@string/retry_exponential_backoff"
+            android:textColor="@android:color/black" />
+
     </LinearLayout>
 </ScrollView>

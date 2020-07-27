@@ -14,6 +14,7 @@ import com.mindorks.kotlinFlow.learn.retrofit.parallel.ParallelNetworkCallsActiv
 import com.mindorks.kotlinFlow.learn.retrofit.series.SeriesNetworkCallsActivity
 import com.mindorks.kotlinFlow.learn.retrofit.single.SingleNetworkCallActivity
 import com.mindorks.kotlinFlow.learn.retry.RetryActivity
+import com.mindorks.kotlinFlow.learn.retryexponentialbackoff.RetryExponentialBackoffActivity
 import com.mindorks.kotlinFlow.learn.retrywhen.RetryWhenActivity
 import com.mindorks.kotlinFlow.learn.room.RoomDBActivity
 import com.mindorks.kotlinFlow.learn.search.SearchActivity
@@ -85,6 +86,10 @@ class MainActivity : AppCompatActivity() {
 
     fun startRetryWhenActivity(view: View) {
         startActivity(Intent(this@MainActivity, RetryWhenActivity::class.java))
+    }
+
+    fun startRetryExponentialBackoffActivity(view: View) {
+        startActivity(Intent(this@MainActivity, RetryExponentialBackoffActivity::class.java))
     }
 
 }
