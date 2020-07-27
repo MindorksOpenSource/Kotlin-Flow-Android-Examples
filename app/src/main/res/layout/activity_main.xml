@@ -104,5 +104,19 @@
             android:text="@string/search"
             android:textColor="@android:color/black" />
 
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="startRetryActivity"
+            android:text="@string/retry"
+            android:textColor="@android:color/black" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="startRetryWhenActivity"
+            android:text="@string/retry_when"
+            android:textColor="@android:color/black" />
+
     </LinearLayout>
 </ScrollView>

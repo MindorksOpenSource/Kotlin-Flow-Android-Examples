@@ -1,4 +1,4 @@
-package com.mindorks.kotlinFlow.learn.retrofit.single
+package com.mindorks.kotlinFlow.learn.retrywhen
 
 import android.os.Bundle
 import android.view.View
@@ -6,58 +6,37 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
-import androidx.recyclerview.widget.DividerItemDecoration
-import androidx.recyclerview.widget.LinearLayoutManager
 import com.mindorks.kotlinFlow.R
 import com.mindorks.kotlinFlow.data.api.ApiHelperImpl
 import com.mindorks.kotlinFlow.data.api.RetrofitBuilder
 import com.mindorks.kotlinFlow.data.local.DatabaseBuilder
 import com.mindorks.kotlinFlow.data.local.DatabaseHelperImpl
-import com.mindorks.kotlinFlow.data.model.ApiUser
-import com.mindorks.kotlinFlow.learn.base.ApiUserAdapter
 import com.mindorks.kotlinFlow.utils.Status
 import com.mindorks.kotlinFlow.utils.ViewModelFactory
-import kotlinx.android.synthetic.main.activity_recycler_view.*
+import kotlinx.android.synthetic.main.activity_retry.*
 
-class SingleNetworkCallActivity : AppCompatActivity() {
+class RetryWhenActivity : AppCompatActivity() {
 
-    private lateinit var viewModel: SingleNetworkCallViewModel
-    private lateinit var adapter: ApiUserAdapter
+    private lateinit var viewModel: RetryWhenViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_recycler_view)
-        setupUI()
+        setContentView(R.layout.activity_retry)
         setupViewModel()
-        setupObserver()
+        setupLongRunningTask()
     }
 
-    private fun setupUI() {
-        recyclerView.layoutManager = LinearLayoutManager(this)
-        adapter =
-            ApiUserAdapter(
-                arrayListOf()
-            )
-        recyclerView.addItemDecoration(
-            DividerItemDecoration(
-                recyclerView.context,
-                (recyclerView.layoutManager as LinearLayoutManager).orientation
-            )
-        )
-        recyclerView.adapter = adapter
-    }
-
-    private fun setupObserver() {
-        viewModel.getUsers().observe(this, Observer {
+    private fun setupLongRunningTask() {
+        viewModel.getStatus().observe(this, Observer {
             when (it.status) {
                 Status.SUCCESS -> {
                     progressBar.visibility = View.GONE
-                    it.data?.let { users -> renderList(users) }
-                    recyclerView.visibility = View.VISIBLE
+                    textView.text = it.data
+                    textView.visibility = View.VISIBLE
                 }
                 Status.LOADING -> {
                     progressBar.visibility = View.VISIBLE
-                    recyclerView.visibility = View.GONE
+                    textView.visibility = View.GONE
                 }
                 Status.ERROR -> {
                     //Handle Error
@@ -66,11 +45,7 @@ class SingleNetworkCallActivity : AppCompatActivity() {
                 }
             }
         })
-    }
-
-    private fun renderList(users: List<ApiUser>) {
-        adapter.addData(users)
-        adapter.notifyDataSetChanged()
+        viewModel.startTask()
     }
 
     private fun setupViewModel() {
@@ -80,6 +55,6 @@ class SingleNetworkCallActivity : AppCompatActivity() {
                 ApiHelperImpl(RetrofitBuilder.apiService),
                 DatabaseHelperImpl(DatabaseBuilder.getInstance(applicationContext))
             )
-        ).get(SingleNetworkCallViewModel::class.java)
+        ).get(RetryWhenViewModel::class.java)
     }
 }

@@ -31,6 +31,7 @@
 * Using operators like filter, map, reduce, flatMapConcat, zip, and etc.
 * Exception in Kotlin Flow
 * How to use onCompletion in Flow?
+* Retry Task using retry operator in Flow
 * Using Kotlin Flow with Retrofit.
 * Using Kotlin Flow with Room Database.
 * Making two network calls in parallel using Kotlin Flow.
@@ -89,13 +90,21 @@
 * **Search Feature:** Implement Search Using Kotlin Flow Operators - Debounce, Filter, DistinctUntilChanged, FlatMapLatest.
     * [Activity Code](app/src/main/java/com/mindorks/kotlinFlow/learn/search/SearchActivity.kt)
 
+* **Retry:**
+    * [Activity Code](app/src/main/java/com/mindorks/kotlinFlow/learn/retry/RetryActivity.kt)
+    * [ViewModel Code](app/src/main/java/com/mindorks/kotlinFlow/learn/retry/RetryViewModel.kt)
+
+* **RetryWhen:**
+    * [Activity Code](app/src/main/java/com/mindorks/kotlinFlow/learn/retrywhen/RetryWhenActivity.kt)
+    * [ViewModel Code](app/src/main/java/com/mindorks/kotlinFlow/learn/retrywhen/RetryWhenViewModel.kt)
+
 ## If this project helps you in anyway, show your love :heart: by putting a :star: on this project :v:
 
 ## Explore Android Online Tutorials and Courses To Learn More by MindOrks
 * [Ride-Sharing Uber Lyft Android App](https://github.com/MindorksOpenSource/ridesharing-uber-lyft-app) - Learn to build a ride-sharing Android Taxi Clone App like Uber, Lyft - Open-Source Project By MindOrks
 * [Android Tutorial](https://mindorks.com/android-tutorial) - All Free Android Tutorials by MindOrks
-* [Android Online Course for Professionals](https://bootcamp.mindorks.com) - In this online course, you’ll learn the Dagger, Kotlin, RxJava, MVVM Architecture, Architecture Components, Jetpack, LiveData, ViewModel, Room Database, Database Design, Multithreading, Memory Management, Networking, Caching, How Glide works, Unit Testing, and the best practices for Android Development. By the end of this online course, you will have all the skills you need to become a professional Android Developer.
-* [Android Online Course for Beginners](https://bootcamp.mindorks.com/android-training-for-beginners) - This course is for beginners for those who want to get started with Android Development. In this course, you will build two apps: TodoNotes and Ride-Sharing Uber Android App.          
+* [Android Online Course for Professionals](https://mindorks.com/android-app-development-online-course-for-professionals) - In this online course, you’ll learn the Dagger, Kotlin, RxJava, MVVM Architecture, Architecture Components, Jetpack, LiveData, ViewModel, Room Database, Database Design, Multithreading, Memory Management, Networking, Caching, How Glide works, Unit Testing, and the best practices for Android Development. By the end of this online course, you will have all the skills you need to become a professional Android Developer.
+* [Android Online Course for Beginners](https://mindorks.com/android-app-development-online-course-for-beginners) - This course is for beginners for those who want to get started with Android Development. In this course, you will build two apps: TodoNotes and Ride-Sharing Uber Android App.
 
 ### Kotlin-Coroutines-Android-Examples - [Check here](https://github.com/MindorksOpenSource/Kotlin-Coroutines-Android-Examples)
 

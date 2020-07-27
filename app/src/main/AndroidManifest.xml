@@ -58,6 +58,14 @@
         <activity
             android:name=".learn.search.SearchActivity"
             android:label="@string/search" />
+
+        <activity
+            android:name=".learn.retry.RetryActivity"
+            android:label="@string/retry" />
+
+        <activity
+            android:name=".learn.retrywhen.RetryWhenActivity"
+            android:label="@string/retry_when" />
     </application>
 
 </manifest>

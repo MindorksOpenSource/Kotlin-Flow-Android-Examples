@@ -42,7 +42,7 @@ class TwoLongRunningTasksActivity : AppCompatActivity() {
                 Status.ERROR -> {
                     //Handle Error
                     progressBar.visibility = View.GONE
-                    Toast.makeText(this, it.message, Toast.LENGTH_LONG).show()
+                    Toast.makeText(this, it.message, Toast.LENGTH_SHORT).show()
                 }
             }
         })
