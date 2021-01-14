@@ -9,10 +9,7 @@ import com.mindorks.kotlinFlow.data.local.DatabaseHelper
 import com.mindorks.kotlinFlow.data.model.ApiUser
 import com.mindorks.kotlinFlow.utils.Resource
 import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.flow.catch
-import kotlinx.coroutines.flow.collect
-import kotlinx.coroutines.flow.flatMapConcat
-import kotlinx.coroutines.flow.flowOn
+import kotlinx.coroutines.flow.*
 import kotlinx.coroutines.launch
 
 class SeriesNetworkCallsViewModel(
@@ -28,9 +25,10 @@ class SeriesNetworkCallsViewModel(
 
     private fun fetchUsers() {
         viewModelScope.launch {
-            users.postValue(Resource.loading(null))
+
             val allUsersFromApi = mutableListOf<ApiUser>()
             apiHelper.getUsers()
+                .onStart { users.postValue(Resource.loading(null)) }
                 .flatMapConcat { usersFromApi ->
                     allUsersFromApi.addAll(usersFromApi)
                     apiHelper.getMoreUsers()

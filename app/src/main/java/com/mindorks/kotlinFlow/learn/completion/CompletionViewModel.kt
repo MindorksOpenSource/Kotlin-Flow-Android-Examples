@@ -10,6 +10,7 @@ import com.mindorks.kotlinFlow.utils.Resource
 import kotlinx.coroutines.flow.catch
 import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.flow.onCompletion
+import kotlinx.coroutines.flow.onStart
 import kotlinx.coroutines.launch
 
 class CompletionViewModel(
@@ -24,8 +25,8 @@ class CompletionViewModel(
     }
     private fun fetchUsers() {
         viewModelScope.launch {
-            status.postValue(Resource.loading(null))
             apiHelper.getUsers()
+                .onStart { status.postValue(Resource.loading(null)) }
                 .catch { e ->
                     status.postValue(Resource.error(e.toString(), null))
                 }

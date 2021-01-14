@@ -22,11 +22,11 @@ class RetryExponentialBackoffModel(
 
     fun startTask() {
         viewModelScope.launch {
-            status.postValue(Resource.loading(null))
             // do a long running task
             var currentDelay = 1000L
             val delayFactor = 2
             doLongRunningTask()
+                .onStart { status.postValue(Resource.loading(null)) }
                 .flowOn(Dispatchers.Default)
                 .retry(retries = 3) { cause ->
                     if (cause is IOException) {

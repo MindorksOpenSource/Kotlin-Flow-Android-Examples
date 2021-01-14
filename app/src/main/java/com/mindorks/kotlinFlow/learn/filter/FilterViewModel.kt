@@ -9,6 +9,7 @@ import com.mindorks.kotlinFlow.data.local.DatabaseHelper
 import com.mindorks.kotlinFlow.utils.Resource
 import kotlinx.coroutines.flow.asFlow
 import kotlinx.coroutines.flow.filter
+import kotlinx.coroutines.flow.onStart
 import kotlinx.coroutines.flow.toList
 import kotlinx.coroutines.launch
 
@@ -20,9 +21,10 @@ class FilterViewModel(
 
     fun startFilterTask() {
         viewModelScope.launch {
-            status.postValue(Resource.loading(null))
+
             val result = mutableListOf<Int>()
             (1..5).asFlow()
+                .onStart {  status.postValue(Resource.loading(null))  }
                 .filter {
                     it % 2 == 0
                 }
