@@ -22,9 +22,9 @@ class RetryViewModel(
 
     fun startTask() {
         viewModelScope.launch {
-            status.postValue(Resource.loading(null))
             // do a long running task
             doLongRunningTask()
+                .onStart { status.postValue(Resource.loading(null)) }
                 .flowOn(Dispatchers.Default)
                 .retry(retries = 3) { cause ->
                     if (cause is IOException) {

@@ -11,6 +11,7 @@ import com.mindorks.kotlinFlow.utils.Resource
 import kotlinx.coroutines.flow.catch
 import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.flow.map
+import kotlinx.coroutines.flow.onStart
 import kotlinx.coroutines.launch
 
 
@@ -27,8 +28,9 @@ class MapViewModel(
 
     private fun fetchUsers() {
         viewModelScope.launch {
-            users.postValue(Resource.loading(null))
+
             apiHelper.getUsers()
+                .onStart { users.postValue(Resource.loading(null)) }
                 .map { apiUserList ->
                     val userList = mutableListOf<User>()
                     for (apiUser in apiUserList) {

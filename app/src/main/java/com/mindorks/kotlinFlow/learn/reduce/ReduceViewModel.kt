@@ -8,6 +8,7 @@ import com.mindorks.kotlinFlow.data.api.ApiHelper
 import com.mindorks.kotlinFlow.data.local.DatabaseHelper
 import com.mindorks.kotlinFlow.utils.Resource
 import kotlinx.coroutines.flow.asFlow
+import kotlinx.coroutines.flow.onStart
 import kotlinx.coroutines.flow.reduce
 import kotlinx.coroutines.launch
 
@@ -20,8 +21,8 @@ class ReduceViewModel(
 
     fun startReduceTask() {
         viewModelScope.launch {
-            status.postValue(Resource.loading(null))
             val result = (1..5).asFlow()
+                .onStart { status.postValue(Resource.loading(null)) }
                 .reduce { a, b -> a + b }
 
             status.postValue(Resource.success(result.toString()))

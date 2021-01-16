@@ -21,8 +21,8 @@ class TwoLongRunningTasksViewModel(
 
     fun startLongRunningTask() {
         viewModelScope.launch {
-            status.postValue(Resource.loading(null))
             doLongRunningTaskOne()
+                .onStart { status.postValue(Resource.loading(null)) }
                 .zip(doLongRunningTaskTwo()) { resultOne, resultTwo ->
                     return@zip resultOne + resultTwo
                 }

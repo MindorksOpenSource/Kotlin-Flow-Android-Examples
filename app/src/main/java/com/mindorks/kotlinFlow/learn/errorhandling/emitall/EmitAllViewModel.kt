@@ -25,8 +25,9 @@ class EmitAllViewModel(
 
     private fun fetchUsers() {
         viewModelScope.launch {
-            users.postValue(Resource.loading(null))
+
             apiHelper.getUsers()
+                .onStart { users.postValue(Resource.loading(null)) }
                 .zip(
                     apiHelper.getUsersWithError()
                         .catch { emitAll(flowOf(emptyList())) }) { usersFromApi, moreUsersFromApi ->

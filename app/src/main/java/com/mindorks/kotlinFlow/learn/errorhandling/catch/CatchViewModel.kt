@@ -10,6 +10,7 @@ import com.mindorks.kotlinFlow.data.model.ApiUser
 import com.mindorks.kotlinFlow.utils.Resource
 import kotlinx.coroutines.flow.catch
 import kotlinx.coroutines.flow.collect
+import kotlinx.coroutines.flow.onStart
 import kotlinx.coroutines.launch
 
 class CatchViewModel(
@@ -25,8 +26,9 @@ class CatchViewModel(
 
     private fun fetchUsers() {
         viewModelScope.launch {
-            users.postValue(Resource.loading(null))
+
             apiHelper.getUsersWithError()
+                .onStart { users.postValue(Resource.loading(null)) }
                 .catch { e ->
                     users.postValue(Resource.error(e.toString(), null))
                 }

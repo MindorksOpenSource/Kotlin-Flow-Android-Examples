@@ -23,8 +23,9 @@ class RoomDBViewModel(private val apiHelper: ApiHelper, private val dbHelper: Da
 
     private fun fetchUsers() {
         viewModelScope.launch {
-            users.postValue(Resource.loading(null))
+
             dbHelper.getUsers()
+                .onStart { users.postValue(Resource.loading(null)) }
                 .flatMapConcat { usersFromDb ->
                     if (usersFromDb.isEmpty()) {
                         return@flatMapConcat apiHelper.getUsers()
