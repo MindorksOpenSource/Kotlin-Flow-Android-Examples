@@ -31,10 +31,7 @@ class ParallelNetworkCallsViewModel(
             users.postValue(Resource.loading(null))
             apiHelper.getUsers()
                 .zip(apiHelper.getMoreUsers()) { usersFromApi, moreUsersFromApi ->
-                    val allUsersFromApi = mutableListOf<ApiUser>()
-                    allUsersFromApi.addAll(usersFromApi)
-                    allUsersFromApi.addAll(moreUsersFromApi)
-                    return@zip allUsersFromApi
+                    usersFromApi + moreUsersFromApi
                 }
                 .flowOn(Dispatchers.Default)
                 .catch { e ->
